@@ -8,10 +8,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 
 public class AccountTest {
@@ -81,5 +78,26 @@ public class AccountTest {
         assumingThat(address != null, () -> {
             assertTrue(account.isActive());
         });
+    }
+
+    @Test
+    void invalidEmailShouldThrowExeption() {
+
+        Account account = new Account();
+
+        assertThrows(IllegalArgumentException.class, () -> account.setEmail("wrongEmail"));
+    }
+
+    @Test
+    void validEmailShouldBeSet() {
+
+        //given
+        Account account = new Account();
+
+        //when
+        account.setEmail("kontakt@devfoundry.pl");
+
+        //then
+        assertThat(account.getEmail(), is("kontakt@devfoundry.pl"));
     }
 }
