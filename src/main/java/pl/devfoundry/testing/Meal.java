@@ -6,6 +6,9 @@ public class Meal {
     private int quantity;
     private String name;
 
+    public Meal() {
+    }
+
     public Meal(int price) {
         this.price = price;
     }
@@ -62,5 +65,9 @@ public class Meal {
         int result = price;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    int sumPrice() {
+        return getPrice() * getQuantity();
     }
 }

@@ -14,7 +14,7 @@ class Cart {
         this.orders.add(order);
     }
 
-    private void clearCart() {
+    void clearCart() {
         this.orders.clear();
     }
 
