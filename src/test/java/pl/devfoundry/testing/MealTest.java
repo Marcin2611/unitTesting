@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
+import pl.devfoundry.testing.order.Order;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -131,9 +132,8 @@ class MealTest {
             int price = order.getMeals().get(i).getPrice();
             int quantity = order.getMeals().get(i).getQuantity();
 
-            Executable executable = () -> {
-                assertThat(calculatePrice(price, quantity), lessThan(67));
-            };
+            Executable executable = () -> assertThat(calculatePrice(price, quantity), lessThan(67));
+
             String name = "Test name: " + i;
             DynamicTest dynamicTest = DynamicTest.dynamicTest(name, executable);
             dynamicTests.add(dynamicTest);

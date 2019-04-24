@@ -1,4 +1,4 @@
-package pl.devfoundry.testing;
+package pl.devfoundry.testing.order;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -8,11 +8,11 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
-public class OrderBackup {
+class OrderBackup {
 
     private Writer writer;
 
-    public Writer getWriter() {
+    Writer getWriter() {
         return writer;
     }
 

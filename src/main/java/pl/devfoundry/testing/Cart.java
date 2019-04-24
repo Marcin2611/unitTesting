@@ -1,9 +1,11 @@
 package pl.devfoundry.testing;
 
+import pl.devfoundry.testing.order.Order;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cart {
+class Cart {
 
     private List<Order> orders = new ArrayList<>();
 
@@ -11,7 +13,7 @@ public class Cart {
         this.orders.add(order);
     }
 
-    void clearCart() {
+    private void clearCart() {
         this.orders.clear();
     }
 
@@ -27,7 +29,7 @@ public class Cart {
         clearCart();
     }
 
-    public List<Order> getOrders() {
+    List<Order> getOrders() {
         return orders;
     }
 }

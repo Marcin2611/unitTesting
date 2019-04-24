@@ -1,4 +1,6 @@
-package pl.devfoundry.testing;
+package pl.devfoundry.testing.order;
+
+import pl.devfoundry.testing.Meal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ public class Order {
         meals.add(meal);
     }
 
-    public void removeMealFromOrder(Meal meal) {
+    void removeMealFromOrder(Meal meal) {
         meals.remove(meal);
     }
 

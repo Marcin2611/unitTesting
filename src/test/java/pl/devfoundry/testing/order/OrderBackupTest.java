@@ -1,10 +1,11 @@
-package pl.devfoundry.testing;
+package pl.devfoundry.testing.order;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pl.devfoundry.testing.Meal;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

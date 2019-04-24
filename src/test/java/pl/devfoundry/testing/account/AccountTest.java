@@ -1,4 +1,4 @@
-package pl.devfoundry.testing;
+package pl.devfoundry.testing.account;
 
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
@@ -11,10 +11,10 @@ import static org.hamcrest.Matchers.nullValue;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 
-public class AccountTest {
+class AccountTest {
 
     @Test
-    public void newAccountShouldNotBeActive() {
+    void newAccountShouldNotBeActive() {
         //given
         Account account = new Account();
 
@@ -75,9 +75,8 @@ public class AccountTest {
         Account account = new Account(address);
 
         //then
-        assumingThat(address != null, () -> {
-            assertTrue(account.isActive());
-        });
+        assumingThat(address != null, () -> assertTrue(account.isActive()));
+
     }
 
     @Test
