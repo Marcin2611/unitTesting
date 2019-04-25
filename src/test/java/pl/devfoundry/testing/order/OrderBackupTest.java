@@ -5,7 +5,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pl.devfoundry.testing.Meal;
+import pl.devfoundry.testing.meal.Meal;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
